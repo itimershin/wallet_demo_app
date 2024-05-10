@@ -11,7 +11,7 @@
     <v-spacer></v-spacer>
     <div class="d-flex justify-end align-center flex-grow-1">
       <v-spacer></v-spacer>
-      <v-btn variant="outlined" text="Настройки" to="/options" class="mr-4"></v-btn>
+      <v-btn variant="outlined" text="options" to="/options" class="mr-4"></v-btn>
       <v-btn variant="outlined" text="Order Book" to="/order"></v-btn>
       <v-spacer></v-spacer>
     </div>

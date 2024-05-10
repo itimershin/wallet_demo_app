@@ -23,7 +23,11 @@
             fixed-header
             :height="tableHeight"
             @update:items-per-page="updateRowsPerPage"
-          ></v-data-table>
+          >
+            <template v-slot:item.price="{ item }">
+              <span class="red-text">{{ item.price }}</span>
+            </template>
+          </v-data-table>
         </v-card>
         <!-- Поле поиска -->
         <v-text-field
@@ -48,7 +52,11 @@
             fixed-header
             :height="tableHeight"
             @update:items-per-page="updateRowsPerPage"
-          ></v-data-table>
+          >
+            <template v-slot:item.price="{ item }">
+              <span class="green-text">{{ item.price }}</span>
+            </template>
+          </v-data-table>
         </v-card>
         <!-- Поле поиска -->
         <v-text-field
@@ -136,4 +144,12 @@ const buyOrders = computed(() => {
   return store.orderBook.buy.map(formatOrder);
 });
 </script>
+<style>
+.red-text {
+  color: #ad2a2a;
+}
+.green-text {
+  color: #2b7e2b;
+}
+</style>
 

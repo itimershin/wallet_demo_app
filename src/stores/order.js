@@ -63,8 +63,8 @@ export const useCurrencyStore = defineStore('currency', () => {
   }
   // Функция для обновления данных
   async function updateOrderBook(data) {
-    orderBook.value.sell = (data.a && data.a.length) ? [...(orderBook.value.sell ?? []), ...data.a].slice(-rowsPerPage.value).reverse() : orderBook.value.sell;
-    orderBook.value.buy = (data.b && data.b.length) ? [...(orderBook.value.buy ?? []), ...data.b].slice(-rowsPerPage.value).reverse() : orderBook.value.buy;
+    orderBook.value.sell = (data.a && data.a.length) ? [...(orderBook.value.sell ?? []), ...data.a].slice(-rowsPerPage.value)  : orderBook.value.sell;
+    orderBook.value.buy = (data.b && data.b.length) ? [...(orderBook.value.buy ?? []), ...data.b].slice(-rowsPerPage.value) : orderBook.value.buy;
   }
 
   // Функция для изменения количества строк на странице
