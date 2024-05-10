@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint . --fix --ignore-path .gitignore"
+    "lint": "eslint . --fix --ignore-path .gitignore",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@mdi/font": "7.0.96",
@@ -23,6 +24,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-vue": "^9.22.0",
+    "gh-pages": "^6.1.1",
     "pinia": "^2.1.7",
     "sass": "^1.71.1",
     "unplugin-auto-import": "^0.17.5",
