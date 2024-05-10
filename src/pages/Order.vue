@@ -9,10 +9,11 @@
     <v-row>
       <v-col cols="12" md="6">
         <v-card>
-          <v-card-title class="text-center title  bg-grey-darken-3 rounded-lg">
+          <v-card-title class="text-center bg-grey-darken-3 rounded-lg">
             Sell Orders
           </v-card-title>
           <v-data-table
+            density="compact"
             :items="sellOrders"
             :headers="getTableHeaders"
             :search="searchSell"
@@ -32,11 +33,12 @@
       </v-col>
       <!-- Отображение таблицы Buy Orders -->
       <v-col>
-        <v-card>
-          <v-card-title class="text-center title bg-grey-darken-3 rounded-lg">
+        <v-card :class="{ 'mt-n12': !mdAndUp }">
+          <v-card-title class="text-center bg-grey-darken-3 rounded-lg">
             Buy Orders
           </v-card-title>
           <v-data-table
+            density="compact"
             :headers="getTableHeaders"
             :items="buyOrders"
             :search="searchBuy"
@@ -69,7 +71,7 @@ const store = useCurrencyStore();
 const { mdAndUp } = useDisplay();
 // Вычисляемое свойство для высоты таблицы в зависимости от экрана
 const tableHeight = computed(() => {
-  return mdAndUp.value ? '70vh' : '30vh';
+  return mdAndUp.value ? '65vh' : '19vh';
 });
 
 // Форматирование выбранной валюты

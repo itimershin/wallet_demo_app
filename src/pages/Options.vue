@@ -4,7 +4,7 @@
       v-model="selectedPair"
       :items="PAIRS_OPTIONS"
       label="Select pair"
-      class="mx-sm-16"
+      class="mx-auto w-sm-50"
     ></v-select>
     <!-- Фиксация изменения пар валют -->
     <div>
