@@ -1,6 +1,6 @@
 <template>
   <v-app-bar :elevation="10">
-    <v-toolbar-title class="text-center flex-grow-1">
+    <v-toolbar-title class="flex-grow-1">
       <router-link to="/">
         <v-img
           height="40"
@@ -8,10 +8,14 @@
         />
       </router-link>
     </v-toolbar-title>
-    <div class="d-flex justify-center flex-grow-1">
-      <v-btn variant="outlined" text="Настройки" to="/customization" class="flex-shrink-0"></v-btn>
-      <v-btn variant="outlined" text="Order Book" to="/order" class="flex-shrink-0"></v-btn>
+    <v-spacer></v-spacer>
+    <div class="d-flex justify-end align-center flex-grow-1">
+      <v-spacer></v-spacer>
+      <v-btn variant="outlined" text="Настройки" to="/options" class="mr-4"></v-btn>
+      <v-btn variant="outlined" text="Order Book" to="/order"></v-btn>
+      <v-spacer></v-spacer>
     </div>
+
   </v-app-bar>
 </template>
 
